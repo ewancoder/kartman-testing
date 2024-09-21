@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>Total</td>
+    <td>{{ summary.totalLaps }}</td>
+  </tr>
+  <tr>
+    <td>Fast N</td>
+    <td>{{ summary.fastestLap }}</td>
+  </tr>
+  <tr>
+    <td>Fast</td>
+    <td class="fastest">{{ summary.fastestLapTime | number: '1.3-3' }}</td>
+  </tr>
+  <tr>
+    <td>Avg</td>
+    <td class="average">{{ summary.averageLapTime | number: '1.3-3' }}</td>
+  </tr>
+  <tr>
+    <td>Slow</td>
+    <td class="slowest">{{ summary.slowestLapTime | number: '1.3-3' }}</td>
+  </tr>
+  <tr>
+    <td>Cons.</td>
+    <td>{{ summary.consistency | number: '1.3-3' }}</td>
+  </tr>
+</table>

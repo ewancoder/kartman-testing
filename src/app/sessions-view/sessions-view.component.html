@@ -1,0 +1,43 @@
+@if (day === 'current') {
+  @if (!useTiming) {
+    <div class="kart-timer">
+      <iframe frameborder="no" src="https://kart-timer.com/drivers/?p=livescreen&track=110"></iframe>
+    </div>
+  } @else {
+    <div style="margin: 10px 100px">
+      <kman-timing></kman-timing>
+    </div>
+  }
+}
+
+<kman-overall-statistics></kman-overall-statistics>
+
+<div class="second-container" [ngClass]="{ 'second-container-reverse': day === 'current' }">
+  <div class="controls">
+    <button class="btn btn-timing" routerLink="/timing" routerLinkActive="active">Timing</button>
+    <button class="btn" (click)="openCurrent()">Current session</button>
+    <input #datepicker placeholder="Select date..." />
+    <button class="btn" (click)="openToday()">Today</button>
+  </div>
+
+  @if (loading$ | async) {
+    <kman-loader />
+  }
+
+  @for (session of sessions$ | async; track session.sessionId; let index = $index) {
+    @if (day !== 'current' || index === 0) {
+      <kman-session
+        [centered]="day === 'current'"
+        [session]="session"
+        [lazy]="index >= 9"
+        [deferLoadByMs]="index >= 9 ? 0 : index * 50"
+        [polled]="index === 0 && shouldPoll"></kman-session>
+    }
+  } @empty {
+    @if (dataLoadedSignal()) {
+      <div style="text-align: center">
+        <h2>No data found, please select a different day</h2>
+      </div>
+    }
+  }
+</div>

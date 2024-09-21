@@ -1,0 +1,41 @@
+@import '../../shared.scss';
+
+.timing {
+  color: black;
+  font-size: clamp(1rem, 4vw, 50rem);
+  font-weight: bold;
+}
+
+.timing-value {
+  padding: 0 5vw;
+}
+
+.positive {
+  color: rgb(250, 27, 150);
+}
+
+.bad {
+  color: red;
+}
+
+.good {
+  color: green;
+}
+
+.fastest {
+  color: $fastestLaptimeColor;
+}
+
+.odd {
+  background-color: #bbb;
+}
+
+.kart-number {
+  padding: 1vw;
+  font-size: clamp(1rem, 5vw, 50rem);
+  text-align: center;
+}
+
+.kart1 {
+  background-color: #ffa600;
+}

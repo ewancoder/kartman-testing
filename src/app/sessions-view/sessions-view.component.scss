@@ -1,0 +1,50 @@
+@import '../../shared.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+$frameHeight: 500px;
+
+iframe {
+  width: 100%;
+  height: $frameHeight;
+}
+
+.kart-timer {
+  width: 100%;
+  height: $frameHeight;
+
+  @media (max-width: $mobileWidth) {
+    display: none;
+  }
+}
+
+.btn-timing {
+  background-color: rgb(230, 209, 25);
+}
+
+.btn:hover {
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.4);
+}
+.btn:active {
+  box-shadow: 0 0px 5px rgb(0 0 0 / 0.4);
+}
+
+.second-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-container-reverse {
+  flex-direction: column-reverse;
+  //height: 100%;
+}

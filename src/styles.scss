@@ -1,0 +1,31 @@
+@import './shared.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $background-color;
+  color: #444;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.kman-hidden {
+  display: none;
+}
+
+.kman-block {
+  padding: 10px;
+}
+
+.flatpickr-input {
+  margin: 5px;
+  height: 32px;
+  width: 150px;
+  font-size: 1.1rem;
+}

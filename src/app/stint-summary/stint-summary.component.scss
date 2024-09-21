@@ -1,0 +1,28 @@
+@import '../../shared.scss';
+
+td {
+  padding: 0 10px;
+}
+
+table {
+  background-color: $statisticsSummaryColor;
+}
+
+.emphasized {
+  font-weight: bold;
+}
+
+.fastest {
+  @extend .emphasized;
+  color: $fastestLaptimeColor;
+}
+
+.average {
+  @extend .emphasized;
+  color: $averageLaptimeColor;
+}
+
+.slowest {
+  @extend .emphasized;
+  color: $slowestLaptimeColor;
+}

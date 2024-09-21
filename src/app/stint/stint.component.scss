@@ -1,0 +1,28 @@
+@import '../../shared.scss';
+
+.kart-info {
+  margin: 5px 0;
+}
+
+.horizontal-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.laps-row {
+  min-width: 145px;
+}
+
+.laps-summary {
+  min-width: 175px;
+  display: flex;
+  flex-direction: column;
+}
+
+.invalidate-btn {
+  background-color: rgb(223, 223, 223);
+}
+
+.hidden {
+  display: none;
+}
